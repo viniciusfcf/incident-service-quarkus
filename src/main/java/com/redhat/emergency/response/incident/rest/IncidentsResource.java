@@ -27,7 +27,8 @@ public class IncidentsResource {
     public Uni<Response> incidents() {
         DeliveryOptions options = new DeliveryOptions().addHeader("action", "incidents");
         return bus.<JsonObject>request("incident-service", new JsonObject(), options)
-                .onItem().transform(msg -> Response.ok(msg.body().getJsonArray("incidents").encode()).build());
+                .onItem().transform(msg -> Response.ok(msg.body().getJsonArray("incidents").encode())
+                .build());
     }
 
     @POST

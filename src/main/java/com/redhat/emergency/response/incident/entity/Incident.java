@@ -20,7 +20,7 @@ import javax.persistence.Version;
 @SequenceGenerator(name="ReportedIncidentSeq", sequenceName="REPORTED_INCIDENT_SEQ", allocationSize = 10)
 @Table(name = "reported_incident")
 @NamedQueries({
-        @NamedQuery(name = "Incident.findAll", query = "SELECT i from Incident i"),
+        @NamedQuery(name = "Incident.findAll", query = "SELECT i from Incident i "),
         @NamedQuery(name = "Incident.byIncidentId", query = "SELECT i FROM Incident i WHERE i.incidentId = :incidentId"),
         @NamedQuery(name = "Incident.byStatus", query = "SELECT i from Incident i WHERE i.status = :status"),
         @NamedQuery(name = "Incident.findByName", query = "SELECT i from Incident i WHERE LOWER(i.victimName) LIKE :pattern"),

@@ -12,7 +12,6 @@ import org.eclipse.microprofile.health.Readiness;
 @ApplicationScoped
 public class ApplicationHealthCheck implements HealthCheck {
 
-
     @Override
     public HealthCheckResponse call() {
         return HealthCheckResponse.named("Health check").up().build();
